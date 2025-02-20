@@ -1,0 +1,79 @@
+.react-overflow-slider-container {
+  overflow: hidden;
+}
+
+.react-overflow-slider {
+  display: flex;
+  margin-bottom: -48px;
+  font-family: sans-serif;
+
+  &__btn-container {
+    z-index: 1;
+    flex: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 48px;
+  }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    font: inherit;
+    background-color: transparent;
+
+    &--visible {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+  }
+
+  &__scroller {
+    flex: auto;
+    padding-bottom: 48px;
+    overflow: {
+      x: auto;
+      y: hidden;
+    }
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & {
+      -ms-overflow-style: none;
+    }
+  }
+
+  &__body {
+    position: relative; // for calculating coordinates
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  &__item {
+    flex: auto;
+  }
+}
+
+.react-overflow-slider-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  border: 2px solid #E4E4E4;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #1f1f1f;
+  background: #fff;
+
+  &--left svg {
+    transform: scale(-1);
+  }
+}

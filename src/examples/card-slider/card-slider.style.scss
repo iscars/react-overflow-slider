@@ -1,0 +1,43 @@
+.card-slider-item {
+  width: 140px;
+  height: 100px;
+  padding: 16px 16px 0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f8fa;
+
+  &__title {
+    font-weight: 600;
+    color: #262626;
+  }
+
+  &__description {
+    margin-top: 4px;
+    font-size: 14px;
+    color: #8C8C8C;
+  }
+}
+
+.card-slider-item-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 100px + 16px;
+  border: 2px solid #E4E4E4;
+  border-radius: 10px;
+  color: #262626;
+}
+
+.card-slider-wrapper {
+  .react-overflow-slider__btn {
+    &--prev {
+      transform: scale(-1);
+    }
+
+    svg {
+      width: 16px;
+    }
+  }
+}

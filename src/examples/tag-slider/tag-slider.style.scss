@@ -1,0 +1,44 @@
+.tag-slider-item {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 24px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #262626;
+}
+
+.tag-slider-btn-container {
+  position: relative;
+  width: 20px;
+  height: 40px;
+}
+
+.tag-slider-btn {
+  position: absolute;
+  left: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #262626;
+
+  &--next {
+    left: auto;
+    right: 0;
+  }
+}
+
+.tag-slider-wrapper {
+  .react-overflow-slider__btn {
+    &--prev {
+      transform: scale(-1);
+    }
+  }
+}
