@@ -32,7 +32,7 @@ const cards = [
   },
   {
     title: "Future Trends",
-    description: "Explore what’s coming next.",
+    description: "Explore what's coming next.",
   },
 ];
 

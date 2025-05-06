@@ -49,7 +49,12 @@ const TagSlider = () => {
         }
       >
         {tags.map(({ text, ...styles }) => (
-          <div key={text} className="tag-slider-item" style={{ ...styles }}>
+          <div
+            key={text}
+            className="tag-slider-item"
+            style={{ ...styles }}
+            {...(text === "Sunset Coral" && { "data-first-visible": "true" })}
+          >
             {text}
           </div>
         ))}

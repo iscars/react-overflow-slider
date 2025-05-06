@@ -7,6 +7,10 @@ const Examples = () => {
   return (
     <div className="container">
       <h2>Text Slider</h2>
+      <small>
+        Note: This slider demonstrates the `data-first-visible="true"` prop in
+        action
+      </small>
       <TagSlider />
       <h2>Card Slider</h2>
       <CardSlider />
