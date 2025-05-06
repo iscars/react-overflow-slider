@@ -21,6 +21,7 @@ A lightweight, high-performance, and responsive **horizontal slider** for React 
 - 📱 **Responsive Design** — Fully adapts to different screen sizes.
 - 🔥 **Supports Any Content** — Text, images, or custom HTML elements.
 - ⚡ **Zero Lag** — Perfect for mobile swipes and MacBook touchpads.
+- 🔍 **Initial Scroll Position** — Set a specific element to be visible on initialization.
 
 ## 📦 Installation
 
@@ -64,6 +65,32 @@ const Example = () => {
 | **nextButton** | `ReactNode`    | —       | Custom "Next" button.                                                                                                               |
 | **gap**      | `number \| string` | `0`   | Gap between elements inside the slider. You can use a number (for pixel values) or a CSS string (e.g., '4px', '1em') for the value. |
 | **duration** | `number`         | `300`   | Scroll animation duration in milliseconds.                                                                                          |
+
+## 🧩 Advanced Features
+
+### 📍 Scroll to a Specific Item on Mount
+
+To make the slider automatically scroll to a specific item when it mounts, add the attribute data-first-visible="true" to any item or its child inside the slider:
+
+```tsx
+<OverflowSlider>
+  {tags.map(({ text, ...styles }) => (
+    <div 
+      key={text} 
+      className="tag-item" 
+      style={{ ...styles }}
+      {
+        // 🔥 Scroll to this item on mount
+        ...(text === "Featured Item" && { "data-first-visible": "true" })
+      }
+    >
+      {text}
+    </div>
+  ))}
+</OverflowSlider>
+```
+
+🔄 The slider will automatically scroll to position the marked item at the start of the visible area on first render.
 
 ## 📋 Examples
 ### 🔤 Text Slider
